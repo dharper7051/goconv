@@ -63,16 +63,16 @@ func main() {
 
 ### Available Functions
 
-- `String(value interface{}) string` - Convert any value to string
-- `Int(value interface{}) int` - Convert to int
-- `Int32(value interface{}) int32` - Convert to int32
-- `Int64(value interface{}) int64` - Convert to int64
-- `Uint(value interface{}) uint` - Convert to uint (negatives become 0)
-- `Uint32(value interface{}) uint32` - Convert to uint32 (negatives become 0)
-- `Uint64(value interface{}) uint64` - Convert to uint64 (negatives become 0)
-- `Float32(value interface{}) float32` - Convert to float32
-- `Float64(value interface{}) float64` - Convert to float64
-- `Bool(value interface{}) bool` - Convert to bool
+- `String(value any) string` - Convert any value to string
+- `Int(value any) int` - Convert to int
+- `Int32(value any) int32` - Convert to int32
+- `Int64(value any) int64` - Convert to int64
+- `Uint(value any) uint` - Convert to uint (negatives become 0)
+- `Uint32(value any) uint32` - Convert to uint32 (negatives become 0)
+- `Uint64(value any) uint64` - Convert to uint64 (negatives become 0)
+- `Float32(value any) float32` - Convert to float32
+- `Float64(value any) float64` - Convert to float64
+- `Bool(value any) bool` - Convert to bool
 
 ### Default Behavior
 
