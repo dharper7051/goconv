@@ -32,16 +32,11 @@ func String(value any) string {
 	case uint64:
 		return strconv.FormatUint(v, 10)
 	case float32:
-		return strconv.FormatFloat(float64(v), 'f', 6, 32)
+		return strconv.FormatFloat(float64(v), 'f', -1, 32)
 	case float64:
-		return strconv.FormatFloat(v, 'f', 6, 64)
+		return strconv.FormatFloat(v, 'f', -1, 64)
 	case bool:
 		return strconv.FormatBool(v)
-	case []bool:
-		if len(v) > 0 {
-			return strconv.FormatBool(v[0])
-		}
-		return ""
 	case string:
 		return v
 	case []byte:
@@ -210,6 +205,31 @@ func Float32(value any) float32 {
 		return v
 	case float64:
 		return float32(v)
+	case int:
+		return float32(v)
+	case int8:
+		return float32(v)
+	case int16:
+		return float32(v)
+	case int32:
+		return float32(v)
+	case int64:
+		return float32(v)
+	case uint:
+		return float32(v)
+	case uint8:
+		return float32(v)
+	case uint16:
+		return float32(v)
+	case uint32:
+		return float32(v)
+	case uint64:
+		return float32(v)
+	case bool:
+		if v {
+			return 1
+		}
+		return 0
 	default:
 		vv, _ := strconv.ParseFloat(String(value), 64)
 		return float32(vv)
@@ -226,6 +246,31 @@ func Float64(value any) float64 {
 		return float64(v)
 	case float64:
 		return v
+	case int:
+		return float64(v)
+	case int8:
+		return float64(v)
+	case int16:
+		return float64(v)
+	case int32:
+		return float64(v)
+	case int64:
+		return float64(v)
+	case uint:
+		return float64(v)
+	case uint8:
+		return float64(v)
+	case uint16:
+		return float64(v)
+	case uint32:
+		return float64(v)
+	case uint64:
+		return float64(v)
+	case bool:
+		if v {
+			return 1
+		}
+		return 0
 	default:
 		vv, _ := strconv.ParseFloat(String(value), 64)
 		return vv
